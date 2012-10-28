@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Templatize Example</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="JTemplate.js"></script>
+    <script type="text/javascript" src="Templatize.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var model = { FN: '', LN: '' };
+            $("#btnTemplatize").click(function () {
+                model.FN = $("#txtFirstName").val();
+                model.LN = $("#txtLastName").val();
+                $("#dvTemplate").templatize("SampleTemplate", model);
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id="txtFirstName" value="John" />
+        <input type="text" id="txtLastName" value="Doe" />
+        <input type="submit" id="btnTemplatize" value="Templatize" />
+    </div>
+    <div class="clear"></div>
+    <div>
+        The templatized content will be displayed below
+        <div id="dvTemplate"></div>
+    </div>
+</body>
+</html>
