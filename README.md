@@ -1,0 +1,1 @@
+To be able to run the Sample HTml, the project needs to be hosted as otherwise the browser will not allow reading the file from disk. Just use any web server at your disposal to host it and everything should work just fine
